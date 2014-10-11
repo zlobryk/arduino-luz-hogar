@@ -8,14 +8,13 @@ void setup() {
 
      pinMode(entrada,OUTPUT);
  pinMode(ilumina,OUTPUT);
-//   TFTscreen.begin();
-//     TFTscreen.background(255, 0, 0  );
+
   Serial.begin(9600);
   Serial.println("A ver");
 
 void loop() {
 int temp= digitalRead(entrada);
-//Serial.println(temp);
+
   if(temp==1&&!flag){
      vcount++;
      if(vcount%2==0){Serial.print("Luz Apagada");digitalWrite(ilumina,LOW);}
